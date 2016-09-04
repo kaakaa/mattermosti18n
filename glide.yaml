@@ -1,0 +1,3 @@
+package: github.com/kaakaa/mattermosti18n
+import:
+- package: github.com/rodrigocorsi2/mattermosti18n

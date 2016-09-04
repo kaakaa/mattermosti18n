@@ -1,0 +1,6 @@
+hash: d71af178888ee0f0032ead83cd3966f01f8b8b3972c3fc0982c07c972de002c7
+updated: 2016-09-05T00:29:50.8167055+09:00
+imports:
+- name: github.com/rodrigocorsi2/mattermosti18n
+  version: bf14eb93583869a302b7fbcf735c9e1620ff2a75
+testImports: []

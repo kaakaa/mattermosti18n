@@ -1,0 +1,16 @@
+sudo: false
+language: go
+go:
+- tip
+
+before_deploy:
+  - export RELEASE_FILES=$(ls mattermost-i18n-*.zip)
+  - echo "deploying $RELEASE_FILES to Github releases"  
+deploy:
+  provider: releases
+  api_key:
+    secure: kenaiDLOXGVStlxlF7jHkkQ3ui2PhYms9HRHoCe960icnL5qS5zBA1YfXlAbFnS1AnWOB7jq7n+zOcD0j4VOnTUSqKwfrEiMHPTWrBPAwl17EmtS0aB0XREakev3jcqrnbUuT2pPLMsVVR7aU4wc9AJiyRHn0tFWWBUsuYPDTE76AAza81yWcdWzugQGCkBQmnTFRmRerlZMgv1HWAfyE9ZWN5eOO8cyfTC/ieqr7qyBekmQ4wYs5wxGjnRRQDArthxbxaXIuMUew3eqJOM9GvkPX6X9I2GJH5pwbj6UDZ8Y4Tj0Ew2TUwFAeuhYYyzqbe12b37V5+xGzSgmGuk9iALP6SlGGWzCAq0wqaRCmhhcDVz+z2N4S/dxpzNXtCwB6FRZb+VtPq8PiubYjw9jMktsYbIa0ef/YR0XDU3Q5X6uhB0/hUqsQqKqvM6RSUphLXMpiaF+ZEvK1C3t3hnMAfx1IEUs0C6JA414rKcimCJwjvMiZyaSSUbaZDihqWMgqXSuaOGFh/qdzTXwFywAHPj7TEqEHsHl5zfk/sJMtDVyylzx34CoqGCYx3ekiO6sIPT9anrswFypgRbv7pYwLv6k4FJk4YGDJG5Y6wAzURYbBBp697aA+FK0u1U0wI01/WK55vpE35eV/83dVnJDfIxpaU7SzIYJHsqdIgpSKcQ=
+  file: "${RELEASE_FILES}"
+  on:
+    repo: kaakaa/mattermosti18n
+    branch: release        
