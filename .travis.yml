@@ -13,4 +13,5 @@ deploy:
   file: "${RELEASE_FILES}"
   on:
     repo: kaakaa/mattermosti18n
+    tags: true
     branch: release        
