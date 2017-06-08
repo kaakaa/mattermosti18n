@@ -13,8 +13,8 @@ init: depend
 	mkdir -p platform/i18n
 	curl -o web_static.json https://raw.githubusercontent.com/mattermost/platform/master/webapp/i18n/en.json
 	curl -o platform.json https://raw.githubusercontent.com/mattermost/platform/master/i18n/en.json
-	curl -o web_static.po "http://translate.mattermost.com/export/?path=/${LOCALE}/mattermost/web_static.po"
-	curl -o platform.po "http://translate.mattermost.com/export/?path=/${LOCALE}/mattermost/platform.po" -v
+	curl -o web_static.po "https://translate.mattermost.com/export/?path=/${LOCALE}/mattermost/web_static.po"
+	curl -o platform.po "https://translate.mattermost.com/export/?path=/${LOCALE}/mattermost/platform.po" -v
 
 depend:
 	go get  -v $(DEPEND)
